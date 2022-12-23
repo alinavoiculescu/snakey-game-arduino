@@ -264,7 +264,15 @@ void printMenuItem() {
   lcd.print(menuItems[menuIdx]);
   showMatrixImage(menuIdx);
   lcd.setCursor(0, 1);
-  lcd.print("<-------------->");
+  if (menuIdx == 0) {
+    lcd.print("<---------------");
+  }
+  else if (menuIdx == noOfMenuItems - 1) {
+    lcd.print("--------------->");
+  }
+  else {
+    lcd.print("<-------------->");
+  }
 }
 
 void scrollMenuItems() {
@@ -303,8 +311,18 @@ byte checkIfGoBack() {
 
 void printHighscores(byte &highscoreIdx) {
   const String stringToDisplay = getHighscore(highscoreIdx);
-  scrollTextOnDisplayLine(stringToDisplay + "^", 0);
-  scrollTextOnDisplayLine("SCROLL FOR MOREv", 1);
+  if (highscoreIdx == 0) {
+    scrollTextOnDisplayLine(stringToDisplay + " ", 0);
+  }
+  else {
+    scrollTextOnDisplayLine(stringToDisplay + "^", 0);
+  }
+  if (highscoreIdx == noHighscores - 1) {
+    scrollTextOnDisplayLine("SCROLL FOR MORE", 1);
+  }
+  else {
+    scrollTextOnDisplayLine("SCROLL FOR MOREv", 1);
+  }
 }
 
 void scrollHighscores(byte &highscoreIdx) {
@@ -319,7 +337,12 @@ void printCurrentDifficulty() {
   lcd.setCursor(0, 0);
   lcd.print("   Current: ");
   lcd.print(difficulty + 1);
-  lcd.print("  ^");
+  if (difficulty != 0) {
+    lcd.print("  ^");
+  }
+  else {
+    lcd.print("   ");
+  }
   lcd.setCursor(0, 1);
   switch (difficulty) {
     case 0:
@@ -332,7 +355,12 @@ void printCurrentDifficulty() {
       lcd.print("      HARD     ");
       break;
   }
-  lcd.print("v");
+  if (difficulty != 2) {
+    lcd.print("v");
+  }
+  else {
+    lcd.print(" ");
+  }
 }
 
 byte scrollDifficulty() {
@@ -350,7 +378,12 @@ void updateDifficulty() {
 
 void printCurrentSoundSetting() {
   lcd.setCursor(0, 0);
-  lcd.print("    Volume:    ^");
+  if (soundOn == false) {
+    lcd.print("    Volume:     ");
+  }
+  else {
+    lcd.print("    Volume:    ^");
+  }
   lcd.setCursor(0, 1);
   switch (soundOn) {
     case 0:
@@ -360,7 +393,12 @@ void printCurrentSoundSetting() {
       lcd.print("       ON      ");
       break;
   }
-  lcd.print("v");
+  if (soundOn == true) {
+    lcd.print(" ");
+  }
+  else {
+    lcd.print("v");
+  }
 }
 
 void updateSound() {
