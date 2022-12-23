@@ -318,7 +318,7 @@ void printHighscores(byte &highscoreIdx) {
     scrollTextOnDisplayLine(stringToDisplay + "^", 0);
   }
   if (highscoreIdx == noHighscores - 1) {
-    scrollTextOnDisplayLine("SCROLL FOR MORE", 1);
+    scrollTextOnDisplayLine("SCROLL FOR MORE ", 1);
   }
   else {
     scrollTextOnDisplayLine("SCROLL FOR MOREv", 1);

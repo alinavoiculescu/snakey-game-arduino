@@ -78,5 +78,22 @@ https://www.youtube.com/watch?v=A14ZXG4NRKk&ab_channel=AlinaVoiculescu
 
 * Additionally, when navigating through the settings menu, it is important to be mindful of the speed at which the joystick is moved. Sometimes, when attempting to exit a submenu and return to the main settings menu, the game may instead navigate to the main menu due to the joystick being held too much. A shorter move is expected for functioning properly. To avoid this issue, it is recommended to move the joystick in a controlled and deliberate manner when navigating through the menu.
 
+## Addendum
+As an additional note, it has come to our attention that the original design of the arrow icons used to indicate scrolling options in the menus may have caused confusion for some players. Specifically, the use of double-sided arrows (**`<-------------->`**) and vertically oriented arrows (**`^`** and **`v`**) may have made it difficult to discern whether the player could scroll left, right, up, or down.
+
+To address this issue, the arrow icons have been modified to include single-sided arrows. The updated icons are as follows:
+
+* Left-facing arrow: **`<--------------`**
+* Double-sided arrow: **`<------------->`**
+* Right-facing arrow: **`-------------->`**
+* Upward-facing arrow: **`^`**
+* Downward-facing arrow: **`v`**
+
+We hope that these changes will improve the clarity and usability of the game's menus for all players.
+
+Please see the following video demonstration of the updated feature: https://www.youtube.com/watch?v=MK7rPxRiK_U&ab_channel=AlinaVoiculescu
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=MK7rPxRiK_U" target="_blank"><img src="http://img.youtube.com/vi/MK7rPxRiK_U/0.jpg" alt="Video - Snakey Game update" width="480" height="360" border="10"></a>
+
 ## Conclusion
 Snakey Game provides a fun and challenging experience for players of all skill levels. Its adjustable difficulty and customizable sound settings allow for a personalized gameplay experience, and its high score feature adds an element of competition. With its matrix display, joystick, and buzzer, the game offers a visually and audibly stimulating experience for the player.
